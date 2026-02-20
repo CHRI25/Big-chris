@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RENCHRIS</title>
-  <!-- Font Awesome 6 (free) -->
+  <title>L.S.S) Braids · Sophie | visual price catalog</title>
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,8 +93,12 @@
       background: #f5a73b;
       color: #000;
     }
+    .btn-small {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.9rem;
+    }
 
-    /* header & navigation (unchanged) */
+    /* header */
     header {
       background-color: white;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -106,7 +110,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
+      padding: 0.8rem 0;
+    }
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .own-works {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: #8a8a8a;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
     }
     .logo {
       font-size: 1.8rem;
@@ -142,7 +159,7 @@
       color: var(--primary);
     }
 
-    /* hero */
+    /* hero (unchanged) */
     .hero {
       background: linear-gradient(95deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%), 
                   url('https://images.unsplash.com/photo-1582755333445-9d2f7b3f2a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
@@ -150,7 +167,6 @@
       display: flex;
       align-items: center;
       color: white;
-      text-align: left;
     }
     .hero-content {
       max-width: 700px;
@@ -181,7 +197,7 @@
       flex-wrap: wrap;
     }
 
-    /* services cards */
+    /* services cards (original) */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -214,7 +230,7 @@
       color: var(--gray);
     }
 
-    /* about Sophie */
+    /* about Sophie (unchanged) */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -280,52 +296,200 @@
       transform: scale(1.05);
     }
 
-    /* Pricing */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    /* ===== NEW PRICE SECTION WITH IMAGES & ORDER BOXES ===== */
+    .price-policies {
+      background: #ffffff;
+      color: #4a4a4a;
     }
-    .pricing-card {
-      background: white;
-      border-radius: 30px;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 20px 30px -10px rgba(178, 59, 94, 0.1);
-      border: 1px solid rgba(178, 59, 94, 0.15);
+    .price-policies h2 {
+      color: #4a4a4a;
     }
-    .pricing-card h3 {
-      font-size: 1.8rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    .price {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin: 1rem 0;
-    }
-    .price small {
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--gray);
-    }
-    .pricing-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 1.5rem 0;
-    }
-    .pricing-card li {
-      padding: 0.4rem 0;
-      color: #555;
-    }
-    .pricing-card li i {
-      color: var(--accent);
-      margin-right: 8px;
+    .price-policies h2:after {
+      background: var(--accent);
     }
 
-    /* Testimonials */
+    /* business card */
+    .business-card-mini {
+      background: #f8f8f8;
+      border-left: 6px solid var(--primary);
+      padding: 1.5rem 2rem;
+      border-radius: 20px;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+    .business-card-mini .logo {
+      color: var(--primary);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-right: 1rem;
+    }
+    .business-card-mini .details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      color: #4a4a4a;
+    }
+    .business-card-mini .details i {
+      color: var(--primary);
+      width: 1.8rem;
+    }
+    .business-card-mini .details span {
+      margin-right: 1.5rem;
+    }
+
+    /* card grid for services */
+    .service-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem;
+    }
+    .service-order-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      border: 1px solid #f0e0e5;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-order-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(178, 59, 94, 0.2);
+    }
+    .card-img {
+      height: 180px;
+      overflow: hidden;
+    }
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+    .service-order-card:hover .card-img img {
+      transform: scale(1.05);
+    }
+    .card-content {
+      padding: 1.5rem 1.2rem 1.2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-content h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.3rem;
+    }
+    .price-range {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+    .duration {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 1rem;
+    }
+    .order-box {
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .order-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      justify-content: center;
+    }
+    .order-btn i {
+      font-size: 1rem;
+    }
+    .order-btn:hover {
+      background: var(--primary-dark);
+    }
+    .note-wash {
+      grid-column: 1 / -1;
+      background: #f2f2f2;
+      padding: 0.8rem 1.5rem;
+      border-radius: 60px;
+      text-align: center;
+      font-style: italic;
+      color: #b23b5e;
+      font-weight: 500;
+    }
+
+    /* policies (unchanged) */
+    .policy-block {
+      background: #fafafa;
+      padding: 1.8rem;
+      border-radius: 30px;
+      margin: 2rem 0 1.5rem;
+      border: 1px solid #eaeaea;
+    }
+    .policy-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .policy-title i {
+      font-size: 1.8rem;
+    }
+    .policy-text {
+      color: #4a4a4a;
+      margin-bottom: 0.8rem;
+      padding-left: 0.5rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+    .policy-text strong {
+      color: #2e2e2e;
+    }
+    .policy-note {
+      background: #ffe9e9;
+      border-radius: 20px;
+      padding: 1rem 1.5rem;
+      margin-top: 1.5rem;
+      font-weight: 500;
+      color: #b23b5e;
+      text-align: center;
+    }
+    .deposit-box {
+      background: #e6f0fa;
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .deposit-box h4 {
+      color: #1e3a5f;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Testimonials (unchanged) */
     .testimonials {
       background: var(--secondary);
     }
@@ -397,7 +561,6 @@
       font-weight: 500;
     }
 
-    /* contact section */
     .contact-section {
       background: var(--light);
     }
@@ -493,7 +656,6 @@
       border-radius: 60px;
     }
 
-    /* footer */
     footer {
       background: var(--dark);
       color: #ccc;
@@ -527,11 +689,11 @@
     @media screen and (max-width: 768px) {
       .hamburger {
         display: block;
-      } 
+      }
       .nav-menu {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 95px;
         flex-direction: column;
         background: white;
         width: 100%;
@@ -553,6 +715,11 @@
       .hero-content p {
         font-size: 1.2rem;
       }
+      .business-card-mini {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
     }
     @media screen and (max-width: 480px) {
       h2 {
@@ -567,14 +734,14 @@
 <body>
   <header>
     <div class="container navbar">
-      <img src="image/WhatsApp Image 2026-02-19 at 11.17.49 AM.jpeg"with="150px"height="100px">
+      <img src="images/Df.jpeg"width="200px"height="150px">
       <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#about">IRENE</a></li>
+        <li><a href="#pricing">Prices</a></li>
+        <li><a href="#about">Sophie</a></li>
         <li><a href="#location">Location</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -585,17 +752,15 @@
     <!-- Hero -->
     <section id="home" class="hero">
       <div class="container hero-content">
-        <h1>RENCHRIS <span>specialized in</span></h1>
+        <h1>L.S.S) <span>specialized in</span></h1>
         <p>Box braids · Senegalese twist · Micro braids</p>
         <div class="hero-buttons">
           <a href="#services" class="btn">Discover styles</a>
-          <!-- Calendly link - replace with your own -->
-          <a href="https://calendly.com/chrissaahfallah21/30min" target="_blank" class="btn btn-accent"><i class="fas fa-calendar-check"></i> Book online</a>
         </div>
       </div>
     </section>
 
-    <!-- Services -- >
+    <!-- Services -->
     <section id="services">
       <div class="container">
         <h2>Our signature braids</h2>
@@ -624,63 +789,422 @@
       <div class="container">
         <h2>Braids gallery</h2>
         <div class="gallery-grid">
-          <div class="gallery-item"><img src="image/dd.jpeg" alt="box braids style"></div>
-          <div class="gallery-item"><img src="image/sen.jpeg" alt="Senegalese twist"></div>
-          <div class="gallery-item"><img src="image/box.jpeg" alt="micro braids"></div>
-          <div class="gallery-item"><img src="image/cc.jpeg" alt="braided bun"></div>
+          <div class="gallery-item"><img src="images/fd.jpeg" alt="box braids style"></div>
+          <div class="gallery-item"><img src="images/sg.jpeg" alt="Senegalese twist"></div>
+          <div class="gallery-item"><img src="images/kc.jpeg" alt="micro braids"></div>
+          <div class="gallery-item"><img src="images/bun.jpeg" alt="braided bun"></div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" style="background: var(--light);">
+    <!-- ===== NEW VISUAL PRICE CATALOG WITH ORDER BUTTONS ===== -->
+    <section id="pricing" class="price-policies">
       <div class="container">
-        <h2>Price guide</h2>
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <h3>Box braids</h3>
-            <div class="price">$50 <small>+</small></div>
-            <ul>
-              <li><i class="fas fa-check"></i> Shoulder length</li>
-              <li><i class="fas fa-check"></i> Medium thickness</li>
-              <li><i class="fas fa-check"></i> Includes wash</li>
-            </ul>
-            <p><small>price varies by length & size</small></p>
+        <!-- business card -->
+        <div class="business-card-mini">
+          <div class="logo">L.S.S) <span style="color:#4a4a4a;">braids</span></div>
+          <div class="details">
+            <span><i class="fas fa-user"></i> Sophie</span>
+            <span><i class="fas fa-map-marker-alt"></i> 1728 Roosevelt Rd, Wheaton, IL 60189</span>
+            <span><i class="fas fa-phone-alt"></i> 773-712-4441</span>
+            <span><i class="fas fa-envelope"></i> SophyMonjolo1@gmail.com</span>
           </div>
-          <div class="pricing-card">
-            <h3>Senegalese twist</h3>
-            <div class="price">$100 <small>+</small></div>
-            <ul>
-              <li><i class="fas fa-check"></i> Waist length option</li>
-              <li><i class="fas fa-check"></i> Lightweight feel</li>
-              <li><i class="fas fa-check"></i> Lasts 6–8 weeks</li>
-            </ul>
+        </div>
+
+        <h2>💇🏾‍♀️ Click any style to order</h2>
+        <div class="service-card-grid">
+          <!-- each card: image, title, price, duration, and order button (mailto) -->
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/box braids.jpeg" alt="Box Braids"></div>
+            <div class="card-content">
+              <h3>Box Braids</h3>
+              <div class="price-range">$220–500</div>
+              <div class="duration">⏱️ 3-7 hrs</div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Box%20Braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
           </div>
-          <div class="pricing-card">
-            <h3>Micro braids</h3>
-            <div class="price">$150 <small>+</small></div>
-            <ul>
-              <li><i class="fas fa-check"></i> Full head, small parts</li>
-              <li><i class="fas fa-check"></i> Natural hairline</li>
-              <li><i class="fas fa-check"></i> 2‑day session</li>
-            </ul>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/knotless braids.jpeg"alt="knotless"></div>
+            <div class="card-content">
+              <h3>Knotless</h3>
+              <div class="price-range">$240–680</div>
+              <div class="duration">⏱️ 4-7 hrs</div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Knotless" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
           </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/cornrows for woman.jpeg" alt="Cornrows for women"></div>
+            <div class="card-content">
+              <h3>Cornrows for women </h3>
+              <div class="price-range">$60–180</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Corn%20rows" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Two strand twists.jpeg" alt="Two strand twist"></div>
+            <div class="card-content">
+              <h3>Two strand twist</h3>
+              <div class="price-range">$220–280</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Tribal%20braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/rr.jpeg" alt="Kinky Twists"></div>
+            <div class="card-content">
+              <h3>Kinky Twists</h3>
+              <div class="price-range">$220–240</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Kinky%20Twists" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/fd.jpeg" alt="Sew-in"></div>
+            <div class="card-content">
+              <h3>Sew-in</h3>
+              <div class="price-range">$160–220</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Sew-in" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/cc.jpeg" alt="Individual Braid"></div>
+            <div class="card-content">
+              <h3>Individual Braids</h3>
+              <div class="price-range">$280–300</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Individual%20Braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Havina.jpeg" alt="Havana Twists"></div>
+            <div class="card-content">
+              <h3>Havana Twists</h3>
+              <div class="price-range">$220–300</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Havana%20Twists" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Passion twist.jpeg" alt="Passion Twist"></div>
+            <div class="card-content">
+              <h3>Passion Twist</h3>
+              <div class="price-range">$220–300</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Passion%20Twist" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Butterfly braids.jpeg" alt="Butterfly Braids"></div>
+            <div class="card-content">
+              <h3>Butterfly Braids</h3>
+              <div class="price-range">$240–500</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Butterfly%20Braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Faux locs.jpeg" alt="Faux Locs"></div>
+            <div class="card-content">
+              <h3>Faux Locs</h3>
+              <div class="price-range">$220–500</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Faux%20Locs" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Lemonade.jpeg" alt="Lemonade Braids"></div>
+            <div class="card-content">
+              <h3>Lemonade Braids</h3>
+              <div class="price-range">$160–260</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Lemonade%20Braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/passion locs.jpeg" alt="Passion Locs"></div>
+            <div class="card-content">
+              <h3>Passion Locs</h3>
+              <div class="price-range">$220–300</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Passion%20Locs" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/sg.jpeg" alt="Senegalese Twists"></div>
+            <div class="card-content">
+              <h3>Senegalese Twists</h3>
+              <div class="price-range">$240–500</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Senegalese%20Twists" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Bob.jpeg" alt="Bob Braids"></div>
+            <div class="card-content">
+              <h3>Bob Braids</h3>
+              <div class="price-range">$180–250</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Bob%20Braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Crochet Braids.jpeg" alt="Crochets"></div>
+            <div class="card-content">
+              <h3>Crochets</h3>
+              <div class="price-range">$160–180</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Crochets" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/gh.jpeg" alt="Ghanaian Braids"></div>
+            <div class="card-content">
+              <h3>Ghanaian Braids</h3>
+              <div class="price-range">$160–250</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Ghanaian%20Braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/box braid 3.jpeg" alt="Marley Twists"></div>
+            <div class="card-content">
+              <h3>Marley Twists</h3>
+              <div class="price-range">$220–500</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Marley%20Twists" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/nubian.jpeg" alt="Nubian Twists"></div>
+            <div class="card-content">
+              <h3>Nubian Twists</h3>
+              <div class="price-range">$240–400</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Nubian%20Twists" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/tree.jpeg" alt="Tree braids"></div>
+            <div class="card-content">
+              <h3>Tree braids</h3>
+              <div class="price-range">$260–300</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Tree%20braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/take down.jpeg" alt="Take down"></div>
+            <div class="card-content">
+              <h3>Take down</h3>
+              <div class="price-range">$50–120</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Take%20down" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/stitch .jpeg" alt="Stitch Cornrows"></div>
+            <div class="card-content">
+              <h3>Stitch Cornrows</h3>
+              <div class="price-range">$50–80</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Stitch%20Cornrows" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/kid.jpeg" alt="Kids Cornrows"></div>
+            <div class="card-content">
+              <h3>Kids Cornrows</h3>
+              <div class="price-range">$80–180</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Kids%20Cornrows" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/km.jpeg" alt="Kids micros"></div>
+            <div class="card-content">
+              <h3>Kids micros</h3>
+              <div class="price-range">$180–260</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Kids%20micros" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/kid individual.jpeg" alt="Kids individual"></div>
+            <div class="card-content">
+              <h3>Kids individual</h3>
+              <div class="price-range">$60–240</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Kids%20individual" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/kk.jpeg" alt="Kids Knotless"></div>
+            <div class="card-content">
+              <h3>Kids Knotless</h3>
+              <div class="price-range">$160–260</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Kids%20Knotless" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/kc.jpeg" alt="Kids Crochets"></div>
+            <div class="card-content">
+              <h3>Kids Crochets</h3>
+              <div class="price-range">$120–160</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Kids%20Crochets" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/Cornrows for man n boys.jpeg" alt="Cornrows for man & boys"></div>
+            <div class="card-content">
+              <h3>Cornrows for man &boys</h3>
+              <div class="price-range">$50–140</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Man%20braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/man dreadlock.jpeg" alt="Man dreadlock"></div>
+            <div class="card-content">
+              <h3>Man dreadlock</h3>
+              <div class="price-range">$140–180</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Man%20dreadlock" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/boys.jpeg" alt="Boys dreadlock"></div>
+            <div class="card-content">
+              <h3>Boys dreadlock</h3>
+              <div class="price-range">$120–160</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Boys%20dreadlock" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-order-card">
+            <div class="card-img"><img src="images/boys braid.jpeg" alt="Boys braids"></div>
+            <div class="card-content">
+              <h3>Boys braids</h3>
+              <div class="price-range">$40–80</div>
+              <div class="duration"></div>
+              <div class="order-box">
+                <a href="mailto:SophyMonjolo1@gmail.com?subject=Booking%20for%20Boys%20braids" class="order-btn"><i class="fas fa-shopping-cart"></i> Book now</a>
+              </div>
+            </div> 
+          </div>
+          <!-- note: wash -->
+          <div class="note-wash"><i class="fas fa-info-circle"></i> Wash: we don't wash</div>
+        </div>
+
+        <!-- policies (unchanged) -->
+        <div class="policy-block">
+          <div class="policy-title"><i class="fas fa-hand-holding-usd"></i> Pre‑pay & satisfaction</div>
+          <div class="policy-text">To all our valued customers. We have a pre pay policy. This is to ensure that you and I receive the best service deserved. We guarantee good service and will make sure you are satisfied. Both parties will be accommodated. <strong>NO REFUNDS. GOD BLESS.</strong>  <strong>PAY:with cash or Zell</strong></div> 
+        </div>
+
+        <div class="policy-block">
+          <div class="policy-title"><i class="fas fa-calendar-times"></i> Touch‑up policy (as of Feb 8, 2026)</div>
+          <div class="policy-text"><strong>NO TOUCH UP AFTER THREE WEEKS.</strong></div>
+        </div>
+
+        <div class="policy-block">
+          <div class="policy-title"><i class="fas fa-exclamation-triangle"></i> Refund policy (as of Feb 16, 2026)</div>
+          <div class="policy-text">PLEASE REMEMBER: ONLY PARTIAL REFUND WILL BE AVAILABLE AND NO REFUNDS ARE AVAILABLE AFTER 24 HOURS.</div>
+          <div class="policy-text">IF YOU ARE UNSATISFIED WITH THE HAIR STYLE PLEASE TELL US DURING OR AFTER THE COMPLETION OF THE HAIR BUT PLEASE DON'T WAIT UNTIL AFTER ONE WEEK BEFORE TELLING.</div>
+        </div>
+
+        <div class="deposit-box">
+          <h4><i class="fas fa-coins"></i> DEPOSIT POLICY</h4>
+          <p>Hi!
+Thank you for contacting  Braidsbylss You have reached us outside of business hours.
+
+If you would like to schedule an appointment, @Braidsbylss@gmail.com 
+For all other enquiries, please kindly be patient and we would get back to you soon!</p>
+          <p>A MINIMUM OF $25.00 IS REQUIRED FOR BOOKING AN APPOINTMENT.</p>
+          <p><strong>DEPOSITS ARE NOT REFUNDABLE UNDER ANY CIRCUMSTANCES.</strong></p>
+        </div>
+
+        <div class="policy-note">
+          <i class="fas fa-heart"></i> Thank you for choosing L.S.S) Braids – we appreciate you!
         </div>
       </div>
     </section>
 
-    <!-- About RENCHRIS -->
+    <!-- About Sophie -->
     <section id="about" style="background: var(--secondary);">
       <div class="container about-grid">
         <div class="about-img">
-          <img src="image/WhatsApp Image 2026-02-19 at 12.10.23 PM.jpeg"> alt="RENCHRIS braid specialist">
+          <img src="images/ceo.jpeg"alt="Sophie">
         </div>
         <div class="about-content">
-          <h2>Meet IRENE</h2>
+          <h2>Meet Sophie</h2>
           <h3>your braid artist</h3>
-          <p>With over 2years of experience, IRENE has built a reputation for meticulous, creative braiding. Trained in Dakar and Chicago, she brings authentic techniques and a modern touch to every client.</p>
+          <p>With over 5 years of experience, Sophie has built a reputation for meticulous, creative braiding. Trained in Dakar and Chicago, she brings authentic techniques and a modern touch to every client.</p>
           <p><i class="fas fa-quote-left" style="color: var(--primary); opacity: 0.6;"></i> I believe braiding is more than a style – it’s confidence, culture, and care. Every head is a canvas. <i class="fas fa-quote-right" style="color: var(--primary); opacity: 0.6;"></i></p>
-          <p class="signature">IRENE</p>
+          <p class="signature">Sophie</p>
         </div>
       </div>
     </section>
@@ -692,61 +1216,41 @@
         <div class="testimonial-grid">
           <div class="testimonial-card">
             <i class="fas fa-quote-left"></i>
-            <p>"IRENE is a magician! My box braids lasted over two months and still looked fresh. She's patient and truly listens."</p>
+            <p>"Sophie is a magician! My box braids lasted over two months and still looked fresh."</p>
             <div class="client">
-              <img src="image/tm.jpeg" alt="client">
-              <div>
-                <h4>PRINCESS</h4>
-                <div class="stars">★★★★★</div>
-              </div>
+              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="client">
+              <div><h4>Jasmine T.</h4><div class="stars">★★★★★</div></div>
             </div>
           </div>
           <div class="testimonial-card">
             <i class="fas fa-quote-left"></i>
-            <p>"I’ve been to many braiders, but RENCHRIS Senegalese twists are unmatched – neat, painless, and gorgeous."</p>
+            <p>"I’ve been to many braiders, but Sophie’s Senegalese twists are unmatched – neat, painless, and gorgeous."</p>
             <div class="client">
-              <img src="image/tm1.jpeg" alt="client">
-              <div>
-                <h4>ANGEL</h4>
-                <div class="stars">★★★★★</div>
-              </div>
+              <img src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="client">
+              <div><h4>Michelle R.</h4><div class="stars">★★★★★</div></div>
             </div>
           </div>
           <div class="testimonial-card">
             <i class="fas fa-quote-left"></i>
-            <p>"The micro braids took two days but were so worth it. Received compliments everywhere. Thank you RENCHRIS!"</p>
+            <p>"The micro braids took two days but were so worth it. Received compliments everywhere."</p>
             <div class="client">
-              <img src="image/tm2.jpeg" alt="client">
-              <div>
-                <h4>PRECIOUS</h4>
-                <div class="stars">★★★★★</div>
-              </div>
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="client">
+              <div><h4>Keisha W.</h4><div class="stars">★★★★★</div></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Location & contact + HOURS + FORMSPREE & CALENDLY INTEGRATED -->
+    <!-- Location & contact -->
     <section id="location" class="contact-section">
       <div class="container">
         <h2>Visit us · get in touch</h2>
         <div class="contact-grid">
-          <!-- left column: address, phone, hours, map -->
           <div class="info-card">
-            <div class="info-item">
-              <i class="fas fa-map-pin"></i>
-              <p><strong>RENCHRIS</strong><br> Amac Market Lugbe,Abuja,Nigeria</p>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-phone-alt"></i>
-              <a href="tel:2348164088634">2348164088634</a>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:chrissaahfallah21@gmail.com">chrissaahfallah21@gmail.com</a>
-            </div>
-            <!-- HOURS OF OPERATION -->
+            <div class="info-item"><i class="fas fa-map-pin"></i><p><strong>SOPHIE's studio</strong><br>1728 Roosevelt Rd, Wheaton, IL 60189</p></div>
+            <div class="info-item"><i class="fas fa-phone-alt"></i><a href="tel:+17737124441">773-712-4441</a></div>
+            <div class="info-item"><i class="fas fa-envelope"></i><a href="mailto:SophyMonjolo1@gmail.com">SophyMonjolo1@gmail.com</a></div>
             <div class="hours-badge">
               <h4><i class="far fa-clock"></i> Hours</h4>
               <p><span>Mon–Fri</span> <span>9:00 AM – 7:00 PM</span></p>
@@ -754,34 +1258,17 @@
               <p><span>Sunday</span> <span class="closed">Closed</span></p>
             </div>
             <div class="map-placeholder">
-              <a href="https://maps.google.com/?q=AMAC+Market+Lugbe+Abuja+Nigeria" target="_blank"><i class="fas fa-map-marked-alt"></i> open in maps</a>
+              <a href="https://maps.google.com/?q=1728+Roosevelt+Rd+Wheaton+IL+60189" target="_blank"><i class="fas fa-map-marked-alt"></i> open in maps</a>
             </div>
           </div>
-
-          <!-- right column: contact form with Formspree (real email) + Calendly button -->
           <div class="contact-form" id="contact">
             <h3>CONTACT US</h3>
-            <!-- FORMSPREE INTEGRATION: replace YOUR_FORM_ID below with your actual Formspree form ID -->
-            <form action="https://formspree.io/f/xpqjlweq" method="POST">
-              <div class="form-group">
-                <input type="text" name="name" placeholder="Your name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Email address" required>
-              </div>
-              <div class="form-group">
-                <textarea name="message" rows="4" placeholder="Tell us about your dream braids..." required></textarea>
-              </div>
+            <form action="https://formspree.io/f/xgollkzz" method="POST">
+              <div class="form-group"><input type="text" name="name" placeholder="Your name" required></div>
+              <div class="form-group"><input type="email" name="email" placeholder="Email address" required></div>
+              <div class="form-group"><textarea name="message" rows="4" placeholder="Tell us about your dream braids..." required></textarea></div>
               <button type="submit" class="btn">Send message</button>
             </form>
-            <p style="margin-top: 1rem; text-align: center;">
-              <!-- Calendly link - replace with your own -->
-              <a href="https://calendly.com/chrissaahfallah21/30min" target="_blank" class="btn btn-accent" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;"><i class="fas fa-calendar-alt"></i> Book online</a>
-            </p>
-            <!-- instructions for replacing placeholders (can be removed later) -->
-            <p style="font-size:0.8rem; color:gray; margin-top:1rem; text-align:center;">
-              ⚡ To activate: replace <code>YOUR_FORM_ID</code> in the form action and update the Calendly link.
-            </p>
           </div>
         </div>
       </div>
@@ -790,28 +1277,25 @@
 
   <footer>
     <div class="container">
-      <div class="logo" style="color: white; margin-bottom: 0.5rem;">RENCHRIS <span style="color: #e0b7c2;">braids</span></div>
-      <p><i class="fas fa-phone-alt"></i>2438164088634/ AMAC Market/ Lugbe /Abuja /Nigeria</p>
+      <div class="logo" style="color: white; margin-bottom: 0.5rem;">L.S.S) <span style="color: #e0b7c2;">braids</span></div>
+      <p><i class="fas fa-phone-alt"></i> 773-712-4441  |  SophyMonjolo1@gmail.com  |  1728 Roosevelt Rd, Wheaton, IL</p>
       <div class="social">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-pinterest"></i></a>
         <a href="#"><i class="fab fa-tiktok"></i></a>
       </div>
-      <p style="font-size: 0.9rem;">© 2025 RENCHRIS studio. All rights reserved.</p>
+      <p style="font-size: 0.9rem;">© 2025 L.S) Braids — Sophie’s studio. All rights reserved.</p>
       <p style="font-size: 0.8rem; opacity: 0.6;">*specialized in box braids, senegalese twist, microbraids*</p>
     </div>
   </footer>
 
-  <!-- hamburger toggle -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
-
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
-
     document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
